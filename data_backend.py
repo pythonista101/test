@@ -161,16 +161,16 @@ salary_image = Image.open('salaris_ss.png')
 intro_image = Image.open('Intro afbeelding.png')
 
 
-with open('text/titel.txt', 'r') as file:
+with open('titel.txt', 'r') as file:
     t_titel = file.read().replace('\n', '')
 
-with open('text/introductie.txt', 'r') as file:
+with open('introductie.txt', 'r') as file:
     t_introductie = file.read()
-with open('text/feature_engineering1.txt', 'r') as file:
+with open('feature_engineering1.txt', 'r') as file:
     t_feature_1 = file.read()
-with open('text/feature_engineering2.txt', 'r') as file:
+with open('feature_engineering2.txt', 'r') as file:
     t_feature_2 = file.read()
-with open('text/feature_engineering3.txt', 'r') as file:
+with open('feature_engineering3.txt', 'r') as file:
     t_feature_3 = file.read()
 
 
