@@ -1,0 +1,4 @@
+aangezien we geïnteresseerd zijn wat de werknemer kan kopen met zijn salaris in zijn/haar land. Daarom leek ons dit de betere keuze in tegenstelling tot het BBP van het land waarin het bedrijf staat. 
+
+Een expatriate, oftewel iemand die voor zijn/haar werk tijdelijk in het buitenland woont. Zijn ook te vinden in onze dataset, daarvoor is de ‘expat’ kolom aangemaakt. Als het een expatriate is, oftewel de locatie van het bedrijf verschilt van de woonplaats van de werknemer, vormt de expat kolom een ‘Yes’.
+Een voorbeeld van een rij uit onze dataset ziet er dan vervolgens zo uit:

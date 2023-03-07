@@ -1,0 +1,23 @@
+Hallo! Wij zijn 4 studenten die bezig zijn met een data science minor aan de Hogeschool van Amsterdam.
+
+In deze blog hebben wij twee data sets geanalyseerd, samengevoed en gemanipuleerd om er achter te komem hoeveel mensen in de datascience wereld verdienen. Wij hebben voor dit onderwerp gekozen om te achterhalen hoeveel wij zelf kunnen gaan verdienen wanneer wij een carriére in de data science wereld najagen. 
+
+Dit doen wij op basis van twee datasets gevonden op kaggle:
+
+- [https://www.kaggle.com/datasets/whenamancodes/data-science-fields-salary-categorization](https://www.kaggle.com/datasets/whenamancodes/data-science-fields-salary-categorization)
+- [https://www.kaggle.com/datasets/zgrcemta/world-gdpgdp-gdp-per-capita-and-annual-growths](https://www.kaggle.com/datasets/zgrcemta/world-gdpgdp-gdp-per-capita-and-annual-growths)
+
+De eerste dataset bevat de volgende informatie van mensen met verschillende beroepen binnen de data science wereld, zoals bijvoorbeeld ‘Data scientist’ en ‘Data analist.’
+
+- Ervarings niveau
+- Dienstverband (fulltime / parttime)
+- Salaris in Rupies
+- Afkomst van persoon
+- Locatie van bedrijf
+- Grote van het bedrijf
+
+De tweede dataset bevat het BBP per hoofd (bruto binnenlands product per persoon) van verschillende landen over de wereld van verschillende jaren. Wij hebben van deze dataset alleen het jaar 2020 gebruikt. Dit hebben wij gedaan, omdat dit het enige jaar was wat overeen kwam met de inforamtie van de eerste dataset.
+
+Deze twee dataset zijn gecombineerd om perpectief te krijgen over hoeveel mensen in de data science wereld verdienen ten opzichte van het BBP. 
+
+In deze blog zullen verschillende figuren terug komen die een overzicht geven van de gevonden data. We zullen afsluiten met een kleine voorspelling waarin jij je salaris kan voorspellen voor wanneer jij ook een carriére binnen de data science wereld najaagd!

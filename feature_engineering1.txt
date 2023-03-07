@@ -1,0 +1,1 @@
+Waar wij tegenaan liepen voor ons begrip bij de salarissen was de munteenheid die werd gebruikt in de dataset, dit waren namelijk roepies. Daarom hebben we ervoor gekozen om de roepies om te zetten naar euro’s met de bij het jaar horende gemiddelde wisselkoers. Deze hebben we afgebeeld in onderstaand figuur (x). 

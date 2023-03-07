@@ -1,0 +1,2 @@
+Om een goed idee te krijgen wat de persoon verdient wilden we een maatstaaf introduceren daarover een goed beeld gaat geven. Hiervoor hebben we de percentage kolom aangemaakt. Deze kolom wordt gevormd door het salaris te delen door het BBP van het land waarin de werknemer woont. De uitkomst vermenigvuldigen we vervolgens met 100 om uiteindelijk de kolom percentage te vormen. 
+We hebben uiteindelijk gekozen om het percentage te baseren op het BBP van het land waarin de medewerker woont 
