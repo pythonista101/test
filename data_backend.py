@@ -3,7 +3,7 @@ import numpy as np
 
 # importing
 data = pd.read_csv(
-    r"C:\Users\daanh\Data Science\Cases\Case2\Data_Science_Fields_Salary_Categorization.csv",
+    "Data_Science_Fields_Salary_Categorization.csv",
     index_col=0
 )
 codes = pd.read_excel('codes.xlsx')
