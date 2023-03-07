@@ -6,3 +6,4 @@ plotly==5.11.0
 streamlit==1.19.0
 ftfy==6.1.1
 sklearn==0.0.post1
+openpyxl==3.0.10
