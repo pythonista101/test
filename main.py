@@ -219,7 +219,9 @@ with salary_pred:
         subheader(f'Het voorspelde salaris is {salarisS}, dat is {percent}% ten opzichte van het gdp')
     
     header('Discussie')
-    write(Discussie)
-    pyplot(piechartdiscussie)
+    fgf, gfg = columns(2)
+    
+    fgf.write(Discussie)
+    gfg.pyplot(piechartdiscussie)
     text("Deze website is gemaakt door: ....")
     image(qrcode)
