@@ -118,19 +118,19 @@ with visualisatie:
     with g:
         markdown('Bedrijfsgrootte')
         Klein=checkbox('Klein', value = True)
-        Medium=checkbox('Medium')
-        Groot=checkbox('Groot')
+        Medium=checkbox('Medium', value = True)
+        Groot=checkbox('Groot', value = True)
     with h:
         markdown('Jaar')
-        j2020=checkbox('2020')
-        j2021=checkbox('2021')
-        j2022=checkbox('2022')
+        j2020=checkbox('2020', value = True)
+        j2021=checkbox('2021', value = True)
+        j2022=checkbox('2022', value = True)
     with f:
         markdown('Ervaring')
-        Starter = checkbox('Starter')
-        Medior = checkbox('Medior')
-        SeniorExpert = checkbox('Senior/Expert')
-        Executive=checkbox('Executive')
+        Starter = checkbox('Starter', value = True)
+        Medior = checkbox('Medior', value = True)
+        SeniorExpert = checkbox('Senior/Expert', value = True)
+        Executive=checkbox('Executive', value = True)
 
     subdata = data
 
@@ -174,23 +174,21 @@ with visualisatie:
         raise ValueError('Het moet een getal zijn')
     opacity = k.slider('Doorzichtigheid', max_value=1000, min_value=0, value=1000, step=1)/1000
     trendline = l.selectbox('Trendlijn', options=[None,'ols', 'lowess',  'expanding' ])
-    try:    
-        try:
-            scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
+    try:
+        scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
                                        y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
                                        labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
                                        trendline=trendline,
                                        opacity=opacity,
                                        trendline_color_override='red')
-            plotly_chart(scatterplotly)
-        except:
-            scatterplotly = px.bar(x=subdata[scatterplotly_x],
+        plotly_chart(scatterplotly)
+    except:
+        scatterplotly = px.bar(x=subdata[scatterplotly_x],
                                        y=subdata[scatterplotly_y],
                                        labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
                                        opacity=opacity)
-            plotly_chart(scatterplotly)
-    except:
-        write('Selecteer in elke kolom in ieder geval 1 checkbox')
+        plotly_chart(scatterplotly)
+
     
 
 with salary_pred:
