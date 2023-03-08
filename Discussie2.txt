@@ -1,1 +1,1 @@
-dataset door meerdere personen. Daarnaast waren er eigenlijk van 3 beroepen maar rond de 100 datapunten waardoor er naast de beroepen van ‘Data-scienist’, ‘Data engineer en ‘Data analist’ een voorspelling wordt gedaan op basis van heel weinig data. 
+Daarnaast waren er eigenlijk van 3 beroepen maar rond de 100 datapunten waardoor er naast de beroepen van ‘Data-scienist’, ‘Data engineer en ‘Data analist’ een voorspelling wordt gedaan op basis van heel weinig data. 
