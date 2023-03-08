@@ -321,6 +321,5 @@ with salary_pred:
         write(Discussie)
     
     write(Discussie2)
-    text("Deze website is gemaakt door: ....")
+    text("Deze website is gemaakt door: Daan van der Hoek, Kasper Goedings, Kevin Kosters, Brandon Haak")
     image(qrcode)
-    pyplot(piechartdiscussie)
