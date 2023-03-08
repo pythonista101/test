@@ -165,6 +165,9 @@ from PIL import Image
 salary_image = Image.open('salaris_ss.png')
 intro_image = Image.open('Intro afbeelding.png')
 qrcode = Image.open('QRcode.png')
+appeltaart = Image.open('piechart.png')
+
+
 
 
 with open('titel.txt', 'r') as file:
