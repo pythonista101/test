@@ -120,7 +120,31 @@ with feature_engineering:
         write(ftfy.fix_encoding(t_feature_2))
     write(ftfy.fix_encoding(t_feature_3))
     write(data.head())
+    
+    
+    
 with visualisatie:
+    header('Visualisatie')
+    tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
+    
+    with tab1_uni:
+        aantal_jobs = slider('Aantal beroepen', min_value=0, max_value=50, value=25)
+
+        kasper = px.bar(data_frame=final_kasper.head(aantal_jobs),
+                        x="Designation",
+                        y="Salary_eur",
+                        color='Designation',
+                        text_auto='.2s',
+                        labels={'Salary_eur': 'Salaris in euro per jaar', 'Designation': 'Beroep'}, height=500,
+                        title="Salaris per jaar per beroep in de US")
+        kasper.add_hline(y=data_kasper['gdp_euro'].mean(), line_width=3, line_dash="dash", line_color="black")
+        plotly_chart(kasper,use_container_width=True)
+
+        scatterplot_salaris, ax = plt.subplots()
+    with tab2_uni:
+        #Kasper jobs
+        code("""
+        with visualisatie:
     header('Visualisatie')
     aantal_jobs = slider('Aantal beroepen', min_value=0, max_value=50, value=25)
 
@@ -133,9 +157,7 @@ with visualisatie:
                     title="Salaris per jaar per beroep in de US")
     kasper.add_hline(y=data_kasper['gdp_euro'].mean(), line_width=3, line_dash="dash", line_color="black")
     plotly_chart(kasper,use_container_width=True)
-
-    scatterplot_salaris, ax = plt.subplots()
-
+        """, language='python')
     
     
     begin, checks, isernogniet = tabs(['Home', 'Subset', 'Kleur'])
