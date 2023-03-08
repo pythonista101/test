@@ -77,6 +77,7 @@ plotly_chart(figureee)""", language='python')
 
 with gdp_merge:
     header('Integreren van de BBP per hoofd data')
+    write(ftfy.fix_encoding(wereldbol))
     merge_l, merge_r = columns(2)
     with merge_l:
         option = radio('Selecteer visualisatie', options=['Kaart', 'Treemap'])
