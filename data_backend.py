@@ -1,5 +1,16 @@
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
+
+
+labels = ['Data Scientist','Data Engineer','Data Analyst', 'Machine Learning Engineer', 'Overige 44 beroepen']
+sizes = [143, 132, 97, 41, 175]
+total = len(data.Designation)
+def fmt(x):
+    return '{:.1f}%\n{:.0f}'.format(x, total*x/100)
+piechartdiscussie, ax = plt.subplots()
+ax.pie(sizes, labels = labelslegenda, autopct=fmt,wedgeprops = {'linewidth' : 3, 'edgecolor' : 'white' })
+
 
 # importing
 data = pd.read_csv(
