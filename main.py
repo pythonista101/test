@@ -224,5 +224,6 @@ with salary_pred:
         write(Discussie)
     with fgf:
         pyplot(piechartdiscussie)
+    write(Discussie2)
     text("Deze website is gemaakt door: ....")
     image(qrcode)
