@@ -323,3 +323,4 @@ with salary_pred:
     write(Discussie2)
     text("Deze website is gemaakt door: ....")
     image(qrcode)
+    pyplot(piechartdiscussie)
