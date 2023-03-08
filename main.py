@@ -116,7 +116,7 @@ with visualisatie:
     scatterplot_salaris, ax = plt.subplots()
     f,g, h=columns(3)
     with g:
-        markdown('Bedrijfsgrootte')
+        markdown('Bedrijfsgrootte', disabled = False)
         Klein=checkbox('Klein')
         Medium=checkbox('Medium')
         Groot=checkbox('Groot')
