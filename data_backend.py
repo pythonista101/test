@@ -180,6 +180,8 @@ with open('feature_engineering3.txt', 'r') as file:
     t_feature_3 = file.read()
 with open('Discussie.txt', 'r') as file:
     Discussie = file.read()
+with open('api.txt', 'r') as file:
+    api = file.read()
 
 with open('Discussie2.txt', 'r') as file:
     Discussie2 = file.read()
