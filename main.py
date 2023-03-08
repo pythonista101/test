@@ -316,7 +316,7 @@ with salary_pred:
     fgf, gfg = columns(2)
     with fgf:
         write('hello bitches')
-        #pyplot(piechartdiscussie)
+        pyplot(piechartdiscussie)
     with gfg:
         write(Discussie)
     
