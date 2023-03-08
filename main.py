@@ -157,14 +157,16 @@ with visualisatie:
                                        trendline=trendline,
                                        opacity=opacity,
                                        trendline_color_override='red')
+            plotly_chart(scatterplotly)
         except:
             scatterplotly = px.bar(x=subdata[scatterplotly_x],
                                        y=subdata[scatterplotly_y],
                                        labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
                                        opacity=opacity)
+            plotly_chart(scatterplotly)
     except:
         write('Selecteer in elke kolom in ieder geval 1 checkbox')
-    plotly_chart(scatterplotly)
+    
 
 with salary_pred:
     header('De salaris voorspeller')
