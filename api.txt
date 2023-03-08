@@ -1,36 +1,15 @@
+Er zijn een aantal stappen die worden genomen voordat de datasets met Kaggle Api kan worden geimporteerd. 
 
-Importeren data met Kaggle Api:
-
-Stappen:
--Authenticatie kaggle Api
--Initialisatie
--Soort dataset 
--Uitpakken en inladen
-
-Authenticatie kaggle Api
-Kaggle verwacht dat we onszelf authenticeren voordat de API gebruikt kan worden.
-
-Stel je kaggle api token in
+Stap 1 : Authenticatie kaggle api (Kaggle verwacht dat we onzelf authenticeren voordat de API gebruikt kan worden:Stel je kaggle api token in
 download kaggle.json file van kaggle
 maak een .kaggle folder aan in hoofdmap gebruikers
-Verplaats de kaggle.json file van downloads naar hoofdmao
+Verplaats de kaggle.json file van downloads naar hoofdmap)
 
-vanaf dan kan kaggle import werken vanuit jupiter
+Stap 2:Initialisatie: (code)
 
-Initialisatie
+Stap 3:Soort dataset: Er zijn twee soorten datasets. Een competitiedataset of de op zichzelf staande datasets.
+Wij maken gebruik van twee datasets die op zichzelf staand zijn.Deze gaan niet gepaard met een wedstrijd en kunnen door iedereen geupload worden.
+Op de datasetpagina staat de gebruikersnaam en de datasetnaam.
 
-
-
-Soort dataset:
-Competitiedataset of de op zichzelf staande datasets
-Wij maken gebruik van twee datasets die op zichzelf staande datasets
-deze gaan niet gepaard met een wedstrijd en kunnen door iedereen geupload worden.
-
-op de datasetpagina staat de gebruikersnaam en de datasetnaam
-
-
-Uitpakken
-Elke dataset die met kaggle api wordt gedownload als een zip bestand
-                                          Source file path
-
-
+Stap 4: Uitpakken
+Elke dataset met kaggle api wordt gedownload als een zip bestand
