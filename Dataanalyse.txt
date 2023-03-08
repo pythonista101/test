@@ -1,1 +1,1 @@
-Hieronder wordt weergegeven hoe de data eruitzag verkregen van onze eerste dataset van Keggle.
+Hieronder wordt weergegeven hoe de data eruitzag verkregen van onze eerste dataset van Kaggle.
