@@ -41,8 +41,8 @@ with data_analyse:
     with tab1_uni:
         left_ana, right_ana=columns(2)
         with left_ana:
-            list_choice = ['Working Year', 'Designation', 'Experience', 'Employment Status', 'Salary In Rupees', 'Employee Location', 'Company Location', 'Company Size', 'Remote_Working_Ratio', 'Count']
-            choice_dict = {'Working Year': 'Working_Year', 'Designation': 'Designation', 'Experience': 'Experience', 'Employment Status': 'Employment_Status', 'Salary In Rupees': 'Salary_In_Rupees', 'Employee Location': 'Employee_Location', 'Company Location': 'Company_Location', 'Company Size': 'Company_Size', 'Remote_Working_Ratio': 'Remote_Working_Ratio', 'Count': 'Count'}
+            list_choice = ['Working Year', 'Designation', 'Experience', 'Employment Status', 'Salary In Rupees', 'Employee Location', 'Company Location', 'Company Size', 'Remote Working Ratio', 'Count']
+            choice_dict = {'Working Year': 'Working_Year', 'Designation': 'Designation', 'Experience': 'Experience', 'Employment Status': 'Employment_Status', 'Salary In Rupees': 'Salary_In_Rupees', 'Employee Location': 'Employee_Location', 'Company Location': 'Company_Location', 'Company Size': 'Company_Size', 'Remote Working Ratio': 'Remote_Working_Ratio', 'Count': 'Count'}
 
             feature_choice=selectbox('Selecteer de kolom', options=list_choice)
 
