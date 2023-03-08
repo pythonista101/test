@@ -323,7 +323,8 @@ with salary_pred:
     write(Discussie2)
     image(qrcode)
 
-    text("Deze website is gemaakt door: Daan van der Hoek, Kasper Goedings, Kevin Kosters, Brandon Haak")
+    text("Deze website is gemaakt door: Daan van der Hoek, Kasper Goedings, Kevin Kosters, ")
+    text('Brandon Haak')
     
     
     
