@@ -27,7 +27,7 @@ with titel:
 with introductie:
     write(ftfy.fix_encoding(t_introductie))
     header('Data importeren via de kaggle API')
-    write('Hier gaan we uitleggen hoe we de data via de kaggle api hebben geimporteerd')
+    write(api)
 
     """import kaggle
     api=kaggle.api()
