@@ -28,10 +28,32 @@ with introductie:
     write(ftfy.fix_encoding(t_introductie))
     header('Data importeren via de kaggle API')
     write(api)
+    code("""
 
-    """import kaggle
-    api=kaggle.api()
-    """
+#Initialisatie
+import kaggle
+from kaggle.api.kaggle_api_extended import KaggleApi
+api = KaggleApi()
+api.authenticate()
+
+#Dataset downloaden
+!kaggle datasets download -d zgrcemta/world-gdpgdp-gdp-per-capita-and-annual-growths
+api.dataset_download_file('zgrcemta/world-gdpgdp-gdp-per-capita-and-annual-growths',
+                         file_name = 'gdp_per_capita.csv')
+!kaggle datasets download -d zgrcemta/world-gdpgdp-gdp-per-capita-and-annual-growths
+
+#Uitpakken
+import zipfile
+
+with zipfile.ZipFile("data-science-fields-salary-categorization.zip","r") as file:
+    file.extractall("Salaris")
+
+with zipfile.ZipFile("world-gdpgdp-gdp-per-capita-and-annual-growths.zip","r") as file:
+    file.extractall("Gdp")
+
+  """, language='python')
+
+
 with data_analyse:
     header('Data analyse')
     write(ftfy.fix_encoding(Dataanalyse))
