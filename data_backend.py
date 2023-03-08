@@ -217,7 +217,7 @@ total = len(data.Designation)
 def fmt(x):
     return '{:.1f}%\n{:.0f}'.format(x, total*x/100)
 piechartdiscussie, ax = plt.subplots()
-ax.pie(sizes, labels = labelslegenda, autopct=fmt,wedgeprops = {'linewidth' : 3, 'edgecolor' : 'white' })
+ax.pie(sizes, labels = labels, autopct=fmt,wedgeprops = {'linewidth' : 3, 'edgecolor' : 'white' })
 
 
 data_kasper=data_kasper[data_kasper.groupby('Designation')['Designation'].transform('count').ge(7)]
