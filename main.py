@@ -217,5 +217,8 @@ with salary_pred:
     if button('Genereer'):
         percent, salarisS = salary_prediction(des, ex, stat, la_pe, la_be, size, rat)
         subheader(f'Het voorspelde salaris is {salarisS}, dat is {percent}% ten opzichte van het gdp')
+    
+    header('Discussie')
+    pyplot(piechartdiscussie)
     text("Deze website is gemaakt door: ....")
     image(qrcode)
