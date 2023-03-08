@@ -78,6 +78,24 @@ plotly_chart(figureee)""", language='python')
 with gdp_merge:
     header('Integreren van de BBP per hoofd data')
     write(ftfy.fix_encoding(wereldbol))
+    tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
+    with tab1_uni:
+        merge_l, merge_r = columns(2)
+        with merge_l:
+            option = radio('Selecteer visualisatie', options=['Kaart', 'Treemap'])
+        if option == 'Kaart':
+            with merge_r:
+                kaart_soort = radio("Is de aarde plat?", options=['Ja', 'Nee'])
+            if kaart_soort=='Ja':
+                plotly_chart(gdp_map_plat, use_container_width=True)
+            else:
+                plotly_chart(gdp_map_bol, use_container_width=True)
+        else:
+            plotly_chart(gdp_treemap, use_container_width=True)
+            
+    with tab2_uni:
+        ##Wereldbol
+        code("""
     merge_l, merge_r = columns(2)
     with merge_l:
         option = radio('Selecteer visualisatie', options=['Kaart', 'Treemap'])
@@ -90,6 +108,8 @@ with gdp_merge:
             plotly_chart(gdp_map_bol, use_container_width=True)
     else:
         plotly_chart(gdp_treemap, use_container_width=True)
+        """, language='python')        
+        
 with feature_engineering:
     header('Feature engineering')
     write(ftfy.fix_encoding(t_feature_1))
@@ -118,7 +138,7 @@ with visualisatie:
 
     
     
-    begin, checks, isernogniet, code2vis = tabs(['Home', 'subset', 'kleur', 'code'])
+    begin, checks, isernogniet = tabs(['Home', 'Subset', 'Kleur'])
     with checks:
         f,g, h=columns(3)
         with g:
