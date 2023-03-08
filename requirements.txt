@@ -8,3 +8,4 @@ ftfy==6.1.1
 sklearn==0.0.post1
 openpyxl==3.0.10
 scikit-learn==1.2.0
+statsmodels==0.13.5
