@@ -117,7 +117,7 @@ with visualisatie:
     f,g, h=columns(3)
     with g:
         markdown('Bedrijfsgrootte')
-        Klein=checkbox('Klein', disabled = True)
+        Klein=checkbox('Klein', value = True)
         Medium=checkbox('Medium')
         Groot=checkbox('Groot')
     with h:
