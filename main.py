@@ -53,8 +53,8 @@ with data_analyse:
     with tab2_uni:
         
         code("""# 2 kolommen maken
-            left_ana, right_ana=columns(2)
-            with left_ana:
+      left_ana, right_ana=columns(2)
+      with left_ana:
             
                 feature_choice=selectbox('Selecteer de kolom', options=raw.columns)
                 bins=slider('Aantal bins', min_value=4, max_value=100)
