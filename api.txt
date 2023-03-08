@@ -1,15 +1,7 @@
-Er zijn een aantal stappen die worden genomen voordat de datasets met Kaggle Api kan worden geimporteerd. 
-
-Stap 1 : Authenticatie kaggle api (Kaggle verwacht dat we onzelf authenticeren voordat de API gebruikt kan worden:Stel je kaggle api token in
-download kaggle.json file van kaggle
-maak een .kaggle folder aan in hoofdmap gebruikers
-Verplaats de kaggle.json file van downloads naar hoofdmap)
-
-Stap 2:Initialisatie: (code)
-
-Stap 3:Soort dataset: Er zijn twee soorten datasets. Een competitiedataset of de op zichzelf staande datasets.
+Kaggle verwacht dat we onzelf authenticeren voordat de API gebruikt kan worden. Hiervoor wordt eerst de kaggle api token ingevoerd.
+Vervolgens wordt een kaggle.json file van kaggle gedownload.Een .kaggle folder moet aangemaakt worden in de hoofdmap gebruikers.
+Een kaggle.json file wordt van downloads naar de hoofdmap verplaatst.Daarna vindt initalisatie plaats (zie code).
+Er zijn twee soorten datasets die gedownload kunnen worden. Een competitiedataset of de op zichzelf staande datasets.
 Wij maken gebruik van twee datasets die op zichzelf staand zijn.Deze gaan niet gepaard met een wedstrijd en kunnen door iedereen geupload worden.
-Op de datasetpagina staat de gebruikersnaam en de datasetnaam.
-
-Stap 4: Uitpakken
-Elke dataset met kaggle api wordt gedownload als een zip bestand
+Op de datasetpagina staat de gebruikersnaam en de datasetnaam. (code)
+Ten slotte wordt elke dataset (met kaggle api) gedownload als een zip bestand.(code)
