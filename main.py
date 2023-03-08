@@ -315,12 +315,16 @@ with salary_pred:
     header('Discussie')
     #fgf, gfg = columns(2)
     #with fgf:
-    write("Piechart verdeling beroepen")
+   # write("Piechart verdeling beroepen")
     
     #with gfg:
     write(Discussie)
-    pyplot(piechartdiscussie)
+    
     write(Discussie2)
     image(qrcode)
 
     text("Deze website is gemaakt door: Daan van der Hoek, Kasper Goedings, Kevin Kosters, Brandon Haak")
+    
+    
+    
+    pyplot(piechartdiscussie)
