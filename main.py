@@ -23,7 +23,7 @@ salary_pred = container()
 
 with titel:
     title("Analyse van salarissen in de data science wereld")
-    image(intro_image)
+    #image(intro_image)
 with introductie:
     write(ftfy.fix_encoding(t_introductie))
     header('Data importeren via de kaggle API')
@@ -51,7 +51,8 @@ with data_analyse:
                                 hover_data=raw.columns, nbins=bins, color=(feature_choice if coloryesno else None))
         plotly_chart(figureee)
     with tab2_uni:
-        code1="""left_ana, right_ana=columns(2)
+        
+        code("""left_ana, right_ana=columns(2)
             with left_ana:
             
                 feature_choice=selectbox('Selecteer de kolom', options=raw.columns)
@@ -65,8 +66,7 @@ with data_analyse:
                                     marginal=plot_choice,
                                     hover_data=raw.columns, nbins=bins, 
                                     color=(feature_choice if coloryesno else None))
-            plotly_chart(figureee)"""
-        code(code1, language='python')
+            plotly_chart(figureee)""", language='python')
 
 
 
