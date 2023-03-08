@@ -181,7 +181,8 @@ with open('feature_engineering3.txt', 'r') as file:
 with open('Discussie.txt', 'r') as file:
     Discussie = file.read()
 
-
+with open('Discussie2.txt', 'r') as file:
+    Discussie2 = file.read()
     
 with open('wereldbol.txt', 'r') as file:
     wereldbol = file.read()
