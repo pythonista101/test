@@ -313,13 +313,13 @@ with salary_pred:
         
     
     header('Discussie')
-    fgf, gfg = columns(2)
-    with fgf:
-        write("Piechart verdeling beroepen")
-        pyplot(piechartdiscussie)
-    with gfg:
-        write(Discussie)
+    #fgf, gfg = columns(2)
+    #with fgf:
+    write("Piechart verdeling beroepen")
     
+    #with gfg:
+    write(Discussie)
+    pyplot(piechartdiscussie)
     write(Discussie2)
     image(qrcode)
 
