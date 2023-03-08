@@ -1,0 +1,2 @@
+Vervolgens hebben we gekeken wat voor data we hadden, wat er ermee konden doen en wat handig was om toe te voegen of verwijderen om er een complete en opgeschoonde dataset van te maken.
+Daarvoor hebben we univariate data analyse gedaan. Hieronder is er een interactief histogram om te kijken naar losse variabelen.

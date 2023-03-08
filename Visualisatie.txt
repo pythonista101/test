@@ -1,0 +1,1 @@
+In deze figuur is te zien hoeveel mensen verdienen per beroep in de US. We hebben ervoor gekozen om alleen data van de US te gebruiken, omdat er niet genoeg data van de andere landen was om daar een betrouwbaar beeld van te geven. De gestippelde zwarte lijn geeft het BBP per hoofd in de US aan. 
