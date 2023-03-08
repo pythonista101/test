@@ -51,8 +51,7 @@ with data_analyse:
                                 hover_data=raw.columns, nbins=bins, color=(feature_choice if coloryesno else None))
         plotly_chart(figureee)
     with tab2_uni:
-        code1=
-        """left_ana, right_ana=columns(2)
+        code1="""left_ana, right_ana=columns(2)
             with left_ana:
             
                 feature_choice=selectbox('Selecteer de kolom', options=raw.columns)
