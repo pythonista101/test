@@ -34,9 +34,10 @@ with introductie:
     """
 with data_analyse:
     header('Data analyse')
+    write(ftfy.fix_encoding(Dataanalyse))
     write(raw.head())
     subheader('Univariate data analyse')
-    
+    write(ftfy.fix_encoding(UnivariateData))
     tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
     with tab1_uni:
         left_ana, right_ana=columns(2)
@@ -125,6 +126,7 @@ with feature_engineering:
     
 with visualisatie:
     header('Visualisatie')
+    write(ftfy.fix_encoding(Visualisatie))
     tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
     
     with tab1_uni:
