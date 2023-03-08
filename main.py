@@ -53,20 +53,20 @@ with data_analyse:
     with tab2_uni:
         
         code("""# 2 kolommen maken
-     left_ana, right_ana=columns(2)
-     with left_ana: 
-       feature_choice=selectbox('Selecteer de kolom', options=raw.columns)
-       bins=slider('Aantal bins', min_value=4, max_value=100)
+left_ana, right_ana=columns(2)
+with left_ana: 
+  feature_choice=selectbox('Selecteer de kolom', options=raw.columns)
+  bins=slider('Aantal bins', min_value=4, max_value=100)
+               
+with right_ana:
+  plot_choice=selectbox('Plot keuze', options=["box",'violin', 'rug'])
+  coloryesno = checkbox('Colorscale')
                 
-     with right_ana:
-       plot_choice=selectbox('Plot keuze', options=["box",'violin', 'rug'])
-       coloryesno = checkbox('Colorscale')
-                
-     figureee = px.histogram(raw.dropna(), x=feature_choice,
+figureee = px.histogram(raw.dropna(), x=feature_choice,
                                 marginal=plot_choice,
                                 hover_data=raw.columns, nbins=bins, 
                                 color=(feature_choice if coloryesno else None))
-     plotly_chart(figureee)""", language='python')
+plotly_chart(figureee)""", language='python')
 
 
 
