@@ -220,10 +220,11 @@ with salary_pred:
     
     header('Discussie')
     fgf, gfg = columns(2)
-    with gfg:
-        write(Discussie)
     with fgf:
         pyplot(piechartdiscussie)
+    with gfg:
+        write(Discussie)
+    
     write(Discussie2)
     text("Deze website is gemaakt door: ....")
     image(qrcode)
