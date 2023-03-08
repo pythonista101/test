@@ -23,7 +23,7 @@ salary_pred = container()
 
 with titel:
     title("Analyse van salarissen in de data science wereld")
-    image(intro_image)
+    #image(intro_image)
 with introductie:
     write(ftfy.fix_encoding(t_introductie))
     header('Data importeren via de kaggle API')
