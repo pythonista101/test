@@ -115,23 +115,27 @@ with visualisatie:
     plotly_chart(kasper,use_container_width=True)
 
     scatterplot_salaris, ax = plt.subplots()
+
     f,g, h=columns(3)
-    with g:
-        markdown('Bedrijfsgrootte')
-        Klein=checkbox('Klein', value = True)
-        Medium=checkbox('Medium', value = True)
-        Groot=checkbox('Groot', value = True)
-    with h:
-        markdown('Jaar')
-        j2020=checkbox('2020', value = True)
-        j2021=checkbox('2021', value = True)
-        j2022=checkbox('2022', value = True)
-    with f:
-        markdown('Ervaring')
-        Starter = checkbox('Starter', value = True)
-        Medior = checkbox('Medior', value = True)
-        SeniorExpert = checkbox('Senior/Expert', value = True)
-        Executive=checkbox('Executive', value = True)
+    
+    begin, checks, isernogniet, code2vis = tabs(['Home', 'subset', 'kleur', 'code'])
+    with checks:
+        with g:
+            markdown('Bedrijfsgrootte')
+            Klein=checkbox('Klein', value = True)
+            Medium=checkbox('Medium', value = True)
+            Groot=checkbox('Groot', value = True)
+        with h:
+            markdown('Jaar')
+            j2020=checkbox('2020', value = True)
+            j2021=checkbox('2021', value = True)
+            j2022=checkbox('2022', value = True)
+        with f:
+            markdown('Ervaring')
+            Starter = checkbox('Starter', value = True)
+            Medior = checkbox('Medior', value = True)
+            SeniorExpert = checkbox('Senior/Expert', value = True)
+            Executive=checkbox('Executive', value = True)
 
     subdata = data
 
@@ -164,17 +168,18 @@ with visualisatie:
     ax.set_title('Scatterplot BBP per hoofd vs salaris')
     ax.set_xlabel('BBP per hoofd')
     #pyplot(scatterplot_salaris)
-    k,l=columns(2)
-    scatterplotly_x = k.selectbox('x-as', options=subdata.columns)
-    scatterplotly_y = l.selectbox('y-as', options=subdata.columns)
+    with begin:    
+        k,l=columns(2)
+        scatterplotly_x = k.selectbox('x-as', options=subdata.columns)
+        scatterplotly_y = l.selectbox('y-as', options=subdata.columns)
 
-    try:
-        distortion_x = float(k.text_input('Ruis-x', value='0'))
-        distortion_y = float(l.text_input('Ruis-y', value='0'))
-    except:
-        raise ValueError('Het moet een getal zijn')
-    opacity = k.slider('Doorzichtigheid', max_value=1000, min_value=0, value=1000, step=1)/1000
-    trendline = l.selectbox('Trendlijn', options=[None,'ols', 'lowess',  'expanding' ])
+        try:
+            distortion_x = float(k.text_input('Ruis-x', value='0'))
+            distortion_y = float(l.text_input('Ruis-y', value='0'))
+        except:
+            raise ValueError('Het moet een getal zijn')
+        opacity = k.slider('Doorzichtigheid', max_value=1000, min_value=0, value=1000, step=1)/1000
+        trendline = l.selectbox('Trendlijn', options=[None,'ols', 'lowess',  'expanding' ])
     try:
         scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
                                            y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
