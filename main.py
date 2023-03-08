@@ -149,18 +149,21 @@ with visualisatie:
         raise ValueError('Het moet een getal zijn')
     opacity = k.slider('Doorzichtigheid', max_value=1000, min_value=0, value=1000, step=1)/1000
     trendline = l.selectbox('Trendlijn', options=[None,'ols', 'lowess',  'expanding' ])
-    try:
-        scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
-                                   y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
-                                   labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
-                                   trendline=trendline,
-                                   opacity=opacity,
-                                   trendline_color_override='red')
+    try:    
+        try:
+            scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
+                                       y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
+                                       labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
+                                       trendline=trendline,
+                                       opacity=opacity,
+                                       trendline_color_override='red')
+        except:
+            scatterplotly = px.bar(x=subdata[scatterplotly_x],
+                                       y=subdata[scatterplotly_y],
+                                       labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
+                                       opacity=opacity)
     except:
-        scatterplotly = px.bar(x=subdata[scatterplotly_x],
-                                   y=subdata[scatterplotly_y],
-                                   labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
-                                   opacity=opacity)
+        write('Selecteer in elke kolom in ieder geval 1 checkbox')
     plotly_chart(scatterplotly)
 
 with salary_pred:
