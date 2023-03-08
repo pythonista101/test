@@ -36,17 +36,22 @@ with data_analyse:
     header('Data analyse')
     write(raw.head())
     subheader('Univariate data analyse')
-    left_ana, right_ana=columns(2)
-    with left_ana:
-        feature_choice=selectbox('Selecteer de kolom', options=raw.columns)
-        bins=slider('Aantal bins', min_value=4, max_value=100)
-    with right_ana:
-        plot_choice=selectbox('Plot keuze', options=["box",'violin', 'rug'])
-        coloryesno = checkbox('Colorscale')
-    figureee = px.histogram(raw.dropna(), x=feature_choice,
-                            marginal=plot_choice,  # or violin, rug
-                            hover_data=raw.columns, nbins=bins, color=(feature_choice if coloryesno else None))
-    plotly_chart(figureee)
+    
+    tab1, tab2 = tabs(['Blog', 'Code'])
+    with tab1:
+        left_ana, right_ana=columns(2)
+        with left_ana:
+            feature_choice=selectbox('Selecteer de kolom', options=raw.columns)
+            bins=slider('Aantal bins', min_value=4, max_value=100)
+        with right_ana:
+            plot_choice=selectbox('Plot keuze', options=["box",'violin', 'rug'])
+            coloryesno = checkbox('Colorscale')
+        figureee = px.histogram(raw.dropna(), x=feature_choice,
+                                marginal=plot_choice,  # or violin, rug
+                                hover_data=raw.columns, nbins=bins, color=(feature_choice if coloryesno else None))
+        plotly_chart(figureee)
+    with tab2:
+        write('test')
 
 
 
