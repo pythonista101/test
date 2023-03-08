@@ -1,0 +1,3 @@
+Na het analyseren van de eerste dataset zijn we een hoop te weten gekomen over de salarissen, echter biedt dit nog weinig perspectief. Iemand die 30k per jaar verdient in Honduras verdient meer dan tien keer het BBP, maar iemand die 30k per jaar verdient in Duitsland verdient minder dan het BBP. 
+
+Om de salarissen meer in perspectief te brengen hebben we een tweede dataset geimporteerd met het BBP per hoofd (zie figuur hieronder). We hebben dit gedaan aan de hand van een ‘left merge.’ Dit houdt in dat we alleen het BBP per hoofd van de landen die overeenkomen met de eerste dataset over hebben genomen
