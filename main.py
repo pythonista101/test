@@ -41,18 +41,12 @@ with data_analyse:
     with tab1_uni:
         left_ana, right_ana=columns(2)
         with left_ana:
-            feature_choice=selectbox('Selecteer de kolom', options=raw.columns)
-            labels={'Working_Year': 'Working Year',
-                    'Designation':'Designation',
-                    'Experience':'Experience',
-                    'Employment_Status':'Employment Status',
-                    'Salary_In_Rupees':'Salary In Rupees',
-                    'Employee_Location':'Employee Location',
-                    'Company_Location':'Company Location',
-                    'Company_Size':'Company Size', 
-                    'Remote_Working_Ratio':'Remote_Working_Ratio',
-                    'Count':'Count'}
-            feature_choice=labels[feature_choice]
+            list_choice = ['Working Year', 'Designation', 'Experience', 'Employment Status', 'Salary In Rupees', 'Employee Location', 'Company Location', 'Company Size', 'Remote_Working_Ratio', 'Count']
+            choice_dict = {'Working Year': 'Working_Year', 'Designation': 'Designation', 'Experience': 'Experience', 'Employment Status': 'Employment_Status', 'Salary In Rupees': 'Salary_In_Rupees', 'Employee Location': 'Employee_Location', 'Company Location': 'Company_Location', 'Company Size': 'Company_Size', 'Remote_Working_Ratio': 'Remote_Working_Ratio', 'Count': 'Count'}
+
+            feature_choice=selectbox('Selecteer de kolom', options=list_choice)
+
+            feature_choice=choice_dict[feature_choice]
             bins=slider('Aantal bins', min_value=4, max_value=100)
         with right_ana:
             plot_choice=selectbox('Plot keuze', options=["box",'violin', 'rug'])
