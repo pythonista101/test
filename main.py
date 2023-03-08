@@ -116,10 +116,11 @@ with visualisatie:
 
     scatterplot_salaris, ax = plt.subplots()
 
-    f,g, h=columns(3)
+    
     
     begin, checks, isernogniet, code2vis = tabs(['Home', 'subset', 'kleur', 'code'])
     with checks:
+        f,g, h=columns(3)
         with g:
             markdown('Bedrijfsgrootte')
             Klein=checkbox('Klein', value = True)
