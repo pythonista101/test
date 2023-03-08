@@ -255,7 +255,7 @@ with visualisatie:
 
 with salary_pred:
     header('De salaris voorspeller')
-    image(salary_image)
+    #image(salary_image)
     write('Benieuwd wat je gaat vedienen als je gaat werken in de data wereld? Stel jouw '
           'toekomstige baan samen door de '
           'onderstaande mini enquete in te vullen en '
