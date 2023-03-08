@@ -315,7 +315,7 @@ with salary_pred:
     header('Discussie')
     fgf, gfg = columns(2)
     with fgf:
-        write("")
+        write("Figuur 1")
         pyplot(piechartdiscussie)
     with gfg:
         write(Discussie)
