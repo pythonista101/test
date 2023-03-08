@@ -259,6 +259,35 @@ with salary_pred:
           'onderstaande mini enquete in te vullen en '
           'kom er achter was je salaris gaat worden!')
 
+    
+    tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
+    with tab1_uni:
+        des = selectbox('Selecteer beroep', options=data.Designation.unique())
+        pred_left, pred_right = columns(2)
+        with pred_left:
+            ex = select_slider('Selecteer ervaring', options=['Entry', 'Medior', 'Senior/Expert', 'Executive'])
+            size = selectbox('Grootte bedrijf', options=['Groot', 'Medium', 'Klein'])
+            la_pe = selectbox('Land persoon', options=data['Land persoon'].unique())
+        with pred_right:
+            rat = slider('Thuiswerk ratio', min_value=0, max_value=100, step=50)
+            stat = selectbox('Selecteer dienstverband', options=['Fulltime', 'Parttime', 'Oproepbasis', 'Freelance'])
+            la_be = selectbox('Land bedrijf', options=data['Land bedrijf'].unique())
+    
+
+    size = size_dict[size]
+    stat = stat_dict[stat]
+    ex = ex_dict[ex]
+    if button('Genereer'):
+        percent, salarisS = salary_prediction(des, ex, stat, la_pe, la_be, size, rat)
+        subheader(f'Het voorspelde salaris is {salarisS}, dat is {percent}% ten opzichte van het gdp')
+    
+    
+    
+    
+    with tab2_uni:
+        ##Salaris voorspeller
+        code("""
+with salary_pred:
     des = selectbox('Selecteer beroep', options=data.Designation.unique())
     pred_left, pred_right = columns(2)
     with pred_left:
@@ -276,6 +305,12 @@ with salary_pred:
     if button('Genereer'):
         percent, salarisS = salary_prediction(des, ex, stat, la_pe, la_be, size, rat)
         subheader(f'Het voorspelde salaris is {salarisS}, dat is {percent}% ten opzichte van het gdp')
+        """, language='python')
+
+    
+    
+        
+        
     
     header('Discussie')
     fgf, gfg = columns(2)
