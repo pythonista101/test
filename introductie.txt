@@ -1,6 +1,6 @@
 Hallo! Wij zijn 4 studenten die bezig zijn met een data science minor aan de Hogeschool van Amsterdam.
 
-In deze blog hebben wij twee data sets geanalyseerd, samengevoed en gemanipuleerd om er achter te komem hoeveel mensen in de datascience wereld verdienen. Wij hebben voor dit onderwerp gekozen om te achterhalen hoeveel wij zelf kunnen gaan verdienen wanneer wij een carriére in de data science wereld najagen. 
+In deze blog hebben wij twee data sets geanalyseerd, samengevoed en gemanipuleerd om er achter te komen hoeveel mensen in de datascience wereld verdienen. Wij hebben voor dit onderwerp gekozen om te achterhalen hoeveel wij zelf kunnen gaan verdienen wanneer wij een carriére in de data science wereld najagen. 
 
 Dit doen wij op basis van twee datasets gevonden op kaggle:
 
