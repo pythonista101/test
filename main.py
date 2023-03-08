@@ -328,4 +328,4 @@ with salary_pred:
     
     
     
-    pyplot(piechartdiscussie)
+    #pyplot(piechartdiscussie)
