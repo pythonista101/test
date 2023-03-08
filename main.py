@@ -142,10 +142,9 @@ with visualisatie:
 
         scatterplot_salaris, ax = plt.subplots()
     with tab2_uni:
-        #Kasper jobs
+        #Visualisatie
         code("""
         with visualisatie:
-    header('Visualisatie')
     aantal_jobs = slider('Aantal beroepen', min_value=0, max_value=50, value=25)
 
     kasper = px.bar(data_frame=final_kasper.head(aantal_jobs),
@@ -204,12 +203,7 @@ with visualisatie:
     x_scatter=subdata['GDP €']+np.random.normal(0,5000,len(subdata['GDP €']))
     y_scatter=subdata['Salaris €']
 
-    ax.scatter(x_scatter,y_scatter,s=5,alpha=0.4)
 
-
-    ax.set_ylabel('Salaris euro')
-    ax.set_title('Scatterplot BBP per hoofd vs salaris')
-    ax.set_xlabel('BBP per hoofd')
     #pyplot(scatterplot_salaris)
     with begin:    
         k,l=columns(2)
@@ -223,21 +217,38 @@ with visualisatie:
             raise ValueError('Het moet een getal zijn')
         opacity = k.slider('Doorzichtigheid', max_value=1000, min_value=0, value=1000, step=1)/1000
         trendline = l.selectbox('Trendlijn', options=[None,'ols', 'lowess',  'expanding' ])
-    try:
-        scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
-                                           y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
-                                           labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
-                                           trendline=trendline,
-                                           opacity=opacity,
-                                           trendline_color_override='red')
-        plotly_chart(scatterplotly)
-    except:
-        scatterplotly = px.bar(x=subdata[scatterplotly_x],
-                                           y=subdata[scatterplotly_y],
-                                           labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
-                                           opacity=opacity)
-        plotly_chart(scatterplotly)
-
+    tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
+    with tab1_uni:                
+        try:
+            scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
+                                               y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
+                                               labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
+                                               trendline=trendline,
+                                               opacity=opacity,
+                                               trendline_color_override='red')
+            plotly_chart(scatterplotly)
+        except:
+            scatterplotly = px.bar(x=subdata[scatterplotly_x],
+                                               y=subdata[scatterplotly_y],
+                                               labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
+                                               opacity=opacity)
+            plotly_chart(scatterplotly)
+    with tab2_uni:
+        code("""
+        try:
+            scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
+                                               y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
+                                               labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
+                                               trendline=trendline,
+                                               opacity=opacity,
+                                               trendline_color_override='red')
+            plotly_chart(scatterplotly)
+        except:
+            scatterplotly = px.bar(x=subdata[scatterplotly_x],
+                                               y=subdata[scatterplotly_y],
+                                               labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
+                                               opacity=opacity)
+            plotly_chart(scatterplotly)""", language='python')
     
 
 with salary_pred:
