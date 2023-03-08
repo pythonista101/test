@@ -185,13 +185,17 @@ with open('Discussie.txt', 'r') as file:
     Discussie = file.read()
 with open('api.txt', 'r') as file:
     api = file.read()
-
 with open('Discussie2.txt', 'r') as file:
     Discussie2 = file.read()
-    
 with open('wereldbol.txt', 'r') as file:
     wereldbol = file.read()
-
+    
+with open('Dataanalyse.txt', 'r') as file:
+    Dataanalyse = file.read()
+with open('Visualisatie.txt', 'r') as file:
+    Visualisatie = file.read()
+with open('UnivariateData.txt', 'r') as file:
+    UnivariateData = file.read()
 
 import plotly.express as px
 gdp_map_bol = px.choropleth(d, locations='Code', color='BBP per hoofd',
