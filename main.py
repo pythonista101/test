@@ -319,7 +319,7 @@ with salary_pred:
     
     #with gfg:
     write(Discussie)
-    
+    image(appeltaart)
     write(Discussie2)
     image(qrcode)
 
