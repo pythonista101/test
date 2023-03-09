@@ -109,7 +109,21 @@ plotly_chart(figureee)""", language='python')
     pyplot(figure2z1)
     
     
-    
+    fig2z2, ax2z2= plt.subplots()
+    pd.crosstab(data.Jaar, data.Grootte).plot(kind='bar',ax=ax2z2)
+    ax2z2.set_ylabel('Aantal')
+    ax2z2.set_title('Het mediane aantal werkenden voor het bedrijf gedurende het jaar ')
+    ax2z2.set_xlabel('Werkjaar')
+    ax2z2.legend(title='Bedrijfsomvang')
+    pyplot(fig2z2)
+
+    fig2z3, ax2z3= plt.subplots()
+    pd.crosstab(data.Jaar, data.Status).plot(kind='bar',ax=ax2z3)
+    ax2z3.set_ylabel('Aantal')
+    ax2z3.set_title('Het type dienstverband voor de functie gedurende het jaar')
+    ax2z3.set_xlabel('Werkjaar')
+    ax2z3.legend(title='Dienstverband')
+    pyplot(fig2z3)
     
     
     
