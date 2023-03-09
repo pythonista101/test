@@ -232,8 +232,8 @@ with visualisatie:
     #pyplot(scatterplot_salaris)
     with begin:    
         k,l=columns(2)
-        scatterplotly_x = k.selectbox('x-as', options=subdata.columns,index=1)
-        scatterplotly_y = l.selectbox('y-as', options=subdata.columns,index=1)
+        scatterplotly_x = k.selectbox('x-as', options=subdata.columns,index=10)
+        scatterplotly_y = l.selectbox('y-as', options=subdata.columns,index=9)
 
         try:
             distortion_x = float(k.text_input('Ruis-x', value='0'))
