@@ -251,9 +251,8 @@ with visualisatie:
                                    'Grootte', 'Thuiswerk ratio']
             kleur_keuze = selectbox('Selecteer categorie voor kleuren', options=kleur_keuze_options)
     
-    with tab1_uni:                
-        try:
-            scatterplotly = px.scatter(subdata,
+     try:
+         scatterplotly = px.scatter(subdata,
                                                x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
                                                y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
                                                labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
@@ -261,18 +260,18 @@ with visualisatie:
                                                opacity=opacity,
                                                trendline_color_override='red', color=kleur_keuze
                                                )
-            plotly_chart(scatterplotly)
-        except:
-            write('Verander parameters')
-        try:
-            scatterplotly = px.bar(x=subdata[scatterplotly_x],
+         plotly_chart(scatterplotly)
+     except:
+         write('Verander parameters')
+     try:
+         scatterplotly = px.bar(x=subdata[scatterplotly_x],
                                                y=subdata[scatterplotly_y],
                                                labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
                                                opacity=opacity)
-            plotly_chart(scatterplotly)
-            write(subdata.columns)
-        except:
-            write('Verander parameters')
+         plotly_chart(scatterplotly)
+         write(subdata.columns)
+     except:
+         write('Verander parameters')
     with code_vis:
         code("""
         try:
