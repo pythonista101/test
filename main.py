@@ -98,10 +98,10 @@ figureee = px.histogram(raw.dropna(), x=feature_choice,
 plotly_chart(figureee)""", language='python')
 
     subheader('Multivariate data analyse')
-    write(ftfy.fix_encoding("Voor de data-analyse zijn we eerst een aantal variabelen gaan analyseren met '
+    write(ftfy.fix_encoding('Voor de data-analyse zijn we eerst een aantal variabelen gaan analyseren met '
                            ' behulp van gegroepeerde staafdiagrammen. De variabelen ervaringsniveau van baan, '
                            ' bedrijfsomvang van het bedrijf en het type dienstverband voor het bedrijf worden '
-                           ' geanalyseerd. "))
+                           ' geanalyseerd. '))
 
     
     brandon_l, brandon_m, brandon_r = tabs(['Ervaring', 'Bedrijfsgrootte', 'Status'])
