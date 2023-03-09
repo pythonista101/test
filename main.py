@@ -20,6 +20,9 @@ feature_engineering = container()
 visualisatie = container()
 salary_pred = container()
 
+with sidebar():
+    header('test')
+
 
 with titel:
     title("Analyse van salarissen in de data science wereld")
