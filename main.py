@@ -183,7 +183,7 @@ with visualisatie:
         """, language='python')
     
     
-    begin, checks, isernogniet = tabs(['Home', 'Subset', 'Kleur'])
+    begin, checks, isernogniet, code_vis = tabs(['Home', 'Subset', 'Kleur', 'Code'])
     with checks:
         f,g, h=columns(3)
         with g:
@@ -242,6 +242,16 @@ with visualisatie:
         opacity = k.slider('Doorzichtigheid', max_value=1000, min_value=0, value=1000, step=1)/1000
         trendline = l.selectbox('Trendlijn', options=[None,'ols', 'lowess',  'expanding' ])
     tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
+    
+    
+    with isernogniet:
+        isernogniet_left, isernogniet_right = columns(2)
+        
+        with isernogniet_left:
+            kleur_keuze_options = [None, 'Jaar', 'Designation', 'Experience', "Land persoon", 'Land bedrijf', 'expat', 
+                                   'Grootte', 'Thuiswerk ratio']
+            kleur_keuze = selectbox('Selecteer categorie voor kleuren', options=kleur_keuze_options)
+    
     with tab1_uni:                
         try:
             scatterplotly = px.scatter(subdata,
@@ -250,7 +260,7 @@ with visualisatie:
                                                labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
                                                trendline=trendline,
                                                opacity=opacity,
-                                               trendline_color_override='red', color='Experience'
+                                               trendline_color_override='red', color=kleur_keuze
                                                )
             plotly_chart(scatterplotly)
         except:
