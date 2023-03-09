@@ -206,12 +206,12 @@ with visualisatie:
     groep_2_sal = data.groupby('Status')['Salaris €']
     groep_3_sal = data.groupby('expat')['Salaris €']
     groep_4_sal = data.groupby('Grootte')['Salaris €']
-    fig34, (ax33) = plt.subplots(2,2)
+    fig34, (ax34) = plt.subplots(2,2)
 
-    groep_1_per.mean().plot(kind = 'bar', ax = ax33[0,0])
-    groep_2_per.mean().plot(kind = 'bar', ax = ax33[0,1])
-    groep_3_per.mean().plot(kind = 'bar', ax = ax33[1,0])
-    groep_4_per.mean().plot(kind = 'bar', ax = ax33[1,1])
+    groep_1_per.mean().plot(kind = 'bar', ax = ax34[0,0])
+    groep_2_per.mean().plot(kind = 'bar', ax = ax34[0,1])
+    groep_3_per.mean().plot(kind = 'bar', ax = ax34[1,0])
+    groep_4_per.mean().plot(kind = 'bar', ax = ax34[1,1])
 
 
 
