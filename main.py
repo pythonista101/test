@@ -186,7 +186,7 @@ with feature_engineering:
     
     
 with visualisatie:
-    groep_1 = data.groupby('Jaar')['%'].mean()
+    groep_1 = data.groupby('Experience')['%'].mean()
     
     figc1, visc1 = plt.subplots()
     groep_1.plot(kind='bar', ax = visc1)
