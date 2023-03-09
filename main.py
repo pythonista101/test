@@ -97,8 +97,7 @@ figureee = px.histogram(raw.dropna(), x=feature_choice,
                                 color=(feature_choice if coloryesno else None))
 plotly_chart(figureee)""", language='python')
 
-    header('tweede data analyse')
-    write(data.columns)
+    subheader('Multivariate data analyse')
     write(ftfy.fix_encoding("Voor de data-analyse zijn we eerst een aantal variabelen gaan analyseren met behulp van gegroepeerde staafdiagrammen. De variabelen ervaringsniveau van baan, bedrijfsomvang van het bedrijf en het type dienstverband voor het bedrijf worden geanalyseerd. "))
 
     
@@ -199,8 +198,10 @@ with feature_engineering:
     
     
 with visualisatie:
-    header('Visualisatie')
-
+    header('Visualisatie - Inzichten uit de data')
+    write(ftfy.fix_encoding('In dit hoofdstuk laten we verschillende visualisaties zien om inzichten te halen uit de data'))
+    
+    subheader('Barplot per categorie')
     left_brandon1, right_brandon1 = tabs(['Salaris' , '%'])
     
     groep_1_per = data.groupby('Experience')['%']
@@ -249,7 +250,7 @@ with visualisatie:
     
     
     
-    
+    subheader('Barplot per beroep')
     write(ftfy.fix_encoding(Visualisatie))
     tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
     
@@ -284,6 +285,7 @@ with visualisatie:
     plotly_chart(kasper,use_container_width=True)
         """, language='python')
     
+    subheader('Samenstelbaar scatterplot')
     begin, checks, isernogniet, code_vis = tabs(['Home', 'Subset', 'Kleur', 'Code'])
     visualisatie_plot = container()
 
@@ -460,8 +462,11 @@ with salary_pred:
     write(Discussie2)
     image(qrcode)
 
-    text("Deze website is gemaakt door: Daan van der Hoek, Kasper Goedings, Kevin Kosters, ")
-    text('Brandon Haak')
+text("Deze website is gemaakt door:")
+text('      -Daan van der Hoek')
+text('      -Kasper Goedings')
+text('      -Kevin Kosters')
+text('      -Brandon Haak')
     
     
     
