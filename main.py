@@ -98,10 +98,7 @@ figureee = px.histogram(raw.dropna(), x=feature_choice,
 plotly_chart(figureee)""", language='python')
 
     subheader('Multivariate data analyse')
-    write(ftfy.fix_encoding('Voor de data-analyse zijn we eerst een aantal variabelen gaan analyseren met '
-                           ' behulp van gegroepeerde staafdiagrammen. De variabelen ervaringsniveau van baan, '
-                           ' bedrijfsomvang van het bedrijf en het type dienstverband voor het bedrijf worden '
-                           ' geanalyseerd. '))
+    write(ftfy.fix_encoding(brandon0))
 
     
     brandon_l, brandon_m, brandon_r = tabs(['Ervaring', 'Bedrijfsgrootte', 'Status'])
@@ -121,13 +118,7 @@ plotly_chart(figureee)""", language='python')
     
     with brandon_m:
               
-        write(ftfy.fix_encoding('Voor de tweede bar plot wordt naar de bedrijfsomvang van het bedrijf gekeken '
-                                'gedurende de jaren 2020-2022.Hierbij zal het aantal medewerkers voor het bedrijf '
-                                'verschillen per bedrijfsomvang. L staat voor meer dan 250 medewerkers, M staat '
-                                'voor 50 tot 250 medewerkers en S staat voor minder dan 50 medewerkers. Als we'
-                                'de bedrijfsomvang vergelijken dan valt het op dat het aantal medewerkers voor '
-                                'de verschillende bedrijfsomvang van 2020 laag is. In het jaar 2022 zien we een '
-                                'groot aantal medewerkers die behoren tot M. ')
+        write(ftfy.fix_encoding(brandon2))
 
         fig2z2, ax2z2= plt.subplots()
         pd.crosstab(data.Jaar, data.Grootte).plot(kind='bar',ax=ax2z2)
@@ -138,12 +129,7 @@ plotly_chart(figureee)""", language='python')
         pyplot(fig2z2)
     with brandon_r:
         
-        write(ftfy.fix_encoding('Voor de derde bar plot wordt het aantal medewerkers per type dienstverband '
-                                'gedurende de jaren 2020-2022 met elkaar vergeleken. PT staat voor Part time,'
-                                'FT staat voor Full time, FL staat voor freelancer, CT staat voor contract. Uit'
-                                'de bar plot valt het op dat voor elk jaar van 2020 tot 2022 het aantal full ti'
-                                'me medewerkers hoog is ten opzichte van de andere dienstverbanden. Voor de overige'
-                                'dienstverbanden blijven de aantallen laag voor elk jaar.')
+        write(ftfy.fix_encoding(brandon3))
 
         
         fig2z3, ax2z3= plt.subplots()
