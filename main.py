@@ -191,7 +191,7 @@ with visualisatie:
     groep_3_per = data.groupby('expat')['%']
     groep_4_per = data.groupby('Grootte')['%']
 
-    fig33, (ax33) = plt.subplots(2,2)
+    fig33, (ax33) = plt.subplots(2,2, sharey=True)
 
     groep_1_per.mean().plot(kind = 'bar', ax = ax33[0,0])
     groep_2_per.mean().plot(kind = 'bar', ax = ax33[0,1])
