@@ -107,16 +107,17 @@ plotly_chart(figureee)""", language='python')
     brandon_l, brandon_m, brandon_r = tabs(['Ervaring', 'Bedrijfsgrootte', 'Status'])
     
     with brandon_l:
-        
+            
         write(ftfy.fix_encoding('Voor de eerste bar plot wordt naar het aantal medewerkers gekeken' 
-                                'per ervaringsniveau van de baan gedurende de jaren 2020-2022. En staat voor '
-                                'entry-level oftewel junior met een instapniveau, Ex staat voor executive met manager '
-                                'gerelateerde beroepen. Mi staat voor een middenklasser en de Se staat voor werkervaring '
-                                'op expert/senior niveau. Als we het aantal medewerkers per ervaringsniveau voor de '
-                                'jaren 2020 tot 2022 met elkaar vergelijken dan valt het op dat het aantal medewerkers'
-                                'met een uitvoerend niveau in alle jaren in de minderheid zijn. Terwijl het aantal '
-                                'middenklassers en expert/senioren hoger ligt. Alleen in het jaar 2020 is het aantal '
-                                'junioren met instapniveau hoger. ')
+                                    'per ervaringsniveau van de baan gedurende de jaren 2020-2022. En staat voor '
+                                    'entry-level oftewel junior met een instapniveau, Ex staat voor executive met manager '
+                                    'gerelateerde beroepen. Mi staat voor een middenklasser en de Se staat voor werkervaring '
+                                    'op expert/senior niveau. Als we het aantal medewerkers per ervaringsniveau voor de '
+                                    'jaren 2020 tot 2022 met elkaar vergelijken dan valt het op dat het aantal medewerkers'
+                                    'met een uitvoerend niveau in alle jaren in de minderheid zijn. Terwijl het aantal '
+                                    'middenklassers en expert/senioren hoger ligt. Alleen in het jaar 2020 is het aantal '
+                                    'junioren met instapniveau hoger. ')
+        
         
         figure2z1,ax2z1= plt.subplots()
         pd.crosstab(data.Jaar, data.Experience).plot(kind='bar',ax=ax2z1)
