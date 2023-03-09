@@ -250,7 +250,7 @@ with visualisatie:
             marker_size_choice = selectbox('Selecteer variabele voor puntgrootte', options=[None, 'Salaris €', 'GDP €', '%'])
         
         with isernogniet_left:
-            kleur_keuze_options = [None, 'Jaar', 'Designation', 'Experience', "Land persoon", 'Land bedrijf', 'expat']
+            kleur_keuze_options = [None, 'Jaar', 'Designation', 'Experience', "Land persoon", 'Land bedrijf', 'expat',
                                    'Grootte', 'Thuiswerk ratio']
             kleur_keuze = selectbox('Selecteer categorie voor kleuren', options=kleur_keuze_options)
     
