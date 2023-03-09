@@ -249,7 +249,8 @@ with visualisatie:
                                                labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
                                                trendline=trendline,
                                                opacity=opacity,
-                                               trendline_color_override='red')
+                                               trendline_color_override='red',
+                                               color='Designation')
             plotly_chart(scatterplotly)
         except:
             scatterplotly = px.bar(x=subdata[scatterplotly_x],
