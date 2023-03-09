@@ -244,12 +244,14 @@ with visualisatie:
     tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
     with tab1_uni:                
         try:
-            scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
+            scatterplotly = px.scatter(subdata,
+                                               x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
                                                y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
                                                labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
                                                trendline=trendline,
                                                opacity=opacity,
-                                               trendline_color_override='red')
+                                               trendline_color_override='red', color='Experience'
+                                               )
             plotly_chart(scatterplotly)
         except:
             write('Verander parameters')
