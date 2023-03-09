@@ -241,7 +241,6 @@ with visualisatie:
             raise ValueError('Het moet een getal zijn')
         opacity = k.slider('Doorzichtigheid', max_value=1000, min_value=0, value=1000, step=1)/1000
         trendline = l.selectbox('Trendlijn', options=[None,'ols', 'lowess',  'expanding' ])
-    tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
     
     
     with isernogniet:
@@ -274,7 +273,7 @@ with visualisatie:
             write(subdata.columns)
         except:
             write('Verander parameters')
-    with tab2_uni:
+    with code_vis:
         code("""
         try:
             scatterplotly = px.scatter(x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
