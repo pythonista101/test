@@ -259,6 +259,7 @@ with visualisatie:
                                                labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
                                                opacity=opacity)
             plotly_chart(scatterplotly)
+            write(subdata.columns)
         except:
             write('Verander parameters')
     with tab2_uni:
