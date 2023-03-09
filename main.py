@@ -108,7 +108,7 @@ plotly_chart(figureee)""", language='python')
     
     with brandon_l:
             
-        write(ftfy.fix_encoding(brandon1)
+        write(ftfy.fix_encoding(brandon1))
         
         
         figure2z1,ax2z1= plt.subplots()
