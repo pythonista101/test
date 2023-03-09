@@ -105,7 +105,7 @@ plotly_chart(figureee)""", language='python')
         figure2z1,ax2z1= plt.subplots()
         pd.crosstab(data.Jaar, data.Experience).plot(kind='bar',ax=ax2z1)
         ax2z1.set_ylabel('Aantal')
-        ax2z1.set_title('Ervaringsniveau van baan gedurende het jaar')
+        ax2z1.set_title('Ervaringsniveau van baan per het jaar')
         ax2z1.set_xlabel('Werkjaar')
         ax2z1.legend(title='Ervaringsniveau')
         pyplot(figure2z1)
@@ -114,7 +114,7 @@ plotly_chart(figureee)""", language='python')
         fig2z2, ax2z2= plt.subplots()
         pd.crosstab(data.Jaar, data.Grootte).plot(kind='bar',ax=ax2z2)
         ax2z2.set_ylabel('Aantal')
-        ax2z2.set_title('Het mediane aantal werkenden voor het bedrijf gedurende het jaar ')
+        ax2z2.set_title('Het mediane aantal werkenden voor het bedrijf per het jaar ')
         ax2z2.set_xlabel('Werkjaar')
         ax2z2.legend(title='Bedrijfsomvang')
         pyplot(fig2z2)
@@ -122,7 +122,7 @@ plotly_chart(figureee)""", language='python')
         fig2z3, ax2z3= plt.subplots()
         pd.crosstab(data.Jaar, data.Status).plot(kind='bar',ax=ax2z3)
         ax2z3.set_ylabel('Aantal')
-        ax2z3.set_title('Het type dienstverband voor de functie gedurende het jaar')
+        ax2z3.set_title('Het type dienstverband voor de functie per het jaar')
         ax2z3.set_xlabel('Werkjaar')
         ax2z3.legend(title='Dienstverband')
         pyplot(fig2z3)
@@ -186,7 +186,8 @@ with feature_engineering:
     
     
 with visualisatie:
-    
+    header('Visualisatie')
+
     left_brandon1, right_brandon1 = tabs(['Salaris' , '%'])
     
     groep_1_per = data.groupby('Experience')['%']
@@ -231,7 +232,6 @@ with visualisatie:
     
     
     
-    header('Visualisatie')
     write(ftfy.fix_encoding(Visualisatie))
     tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
     
@@ -373,7 +373,7 @@ with visualisatie:
 with salary_pred:
     header('De salaris voorspeller')
     #image(salary_image)
-    write('Benieuwd wat je gaat vedienen als je gaat werken in de data wereld? Stel jouw '
+    write('Benieuwd wat je gaat verdienen als je gaat werken in de data wereld? Stel jouw '
           'toekomstige baan samen door de '
           'onderstaande mini enquete in te vullen en '
           'kom er achter was je salaris gaat worden!')
