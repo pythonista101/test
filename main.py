@@ -182,8 +182,9 @@ with visualisatie:
     plotly_chart(kasper,use_container_width=True)
         """, language='python')
     
-    
     begin, checks, isernogniet, code_vis = tabs(['Home', 'Subset', 'Kleur', 'Code'])
+    visualisatie_plot = container()
+
     with checks:
         f,g, h=columns(3)
         with g:
@@ -251,27 +252,28 @@ with visualisatie:
                                    'Grootte', 'Thuiswerk ratio']
             kleur_keuze = selectbox('Selecteer categorie voor kleuren', options=kleur_keuze_options)
     
-     try:
-         scatterplotly = px.scatter(subdata,
-                                               x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
-                                               y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
-                                               labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
-                                               trendline=trendline,
-                                               opacity=opacity,
-                                               trendline_color_override='red', color=kleur_keuze
-                                               )
-         plotly_chart(scatterplotly)
-     except:
-         write('Verander parameters')
-     try:
-         scatterplotly = px.bar(x=subdata[scatterplotly_x],
-                                               y=subdata[scatterplotly_y],
-                                               labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
-                                               opacity=opacity)
-         plotly_chart(scatterplotly)
-         write(subdata.columns)
-     except:
-         write('Verander parameters')
+    with visualisatie_plot:      
+        try:
+             scatterplotly = px.scatter(subdata,
+                                                   x=subdata[scatterplotly_x]+np.random.normal(0,distortion_x,len(subdata)),
+                                                   y=subdata[scatterplotly_y]+np.random.normal(0,distortion_y,len(subdata)),
+                                                   labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
+                                                   trendline=trendline,
+                                                   opacity=opacity,
+                                                   trendline_color_override='red', color=kleur_keuze
+                                                   )
+             plotly_chart(scatterplotly)
+         except:
+             write('Verander parameters')
+         try:
+             scatterplotly = px.bar(x=subdata[scatterplotly_x],
+                                                   y=subdata[scatterplotly_y],
+                                                   labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
+                                                   opacity=opacity)
+             plotly_chart(scatterplotly)
+             write(subdata.columns)
+         except:
+             write('Verander parameters')
     with code_vis:
         code("""
         try:
