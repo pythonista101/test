@@ -263,16 +263,16 @@ with visualisatie:
                                                    trendline_color_override='red', color=kleur_keuze
                                                    )
              plotly_chart(scatterplotly)
-         except:
+        except:
              write('Verander parameters')
-         try:
+        try:
              scatterplotly = px.bar(x=subdata[scatterplotly_x],
                                                    y=subdata[scatterplotly_y],
                                                    labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
                                                    opacity=opacity)
              plotly_chart(scatterplotly)
              write(subdata.columns)
-         except:
+        except:
              write('Verander parameters')
     with code_vis:
         code("""
