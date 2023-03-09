@@ -249,8 +249,7 @@ with visualisatie:
                                                labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
                                                trendline=trendline,
                                                opacity=opacity,
-                                               trendline_color_override='red',
-                                               color='Designation')
+                                               trendline_color_override='red')
             plotly_chart(scatterplotly)
         except:
             write('Verander parameters')
