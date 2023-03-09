@@ -20,7 +20,6 @@ feature_engineering = container()
 visualisatie = container()
 salary_pred = container()
 
-sidebar.header('test')
 
 
 with titel:
