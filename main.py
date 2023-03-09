@@ -246,9 +246,11 @@ with visualisatie:
     
     with isernogniet:
         isernogniet_left, isernogniet_right = columns(2)
+        with isernogniet_right:
+            marker_size_choice = selectbox('Selecteer variabele voor puntgrootte', options=[None, 'Salaris €', 'GDP €', '%']
         
         with isernogniet_left:
-            kleur_keuze_options = [None, 'Jaar', 'Designation', 'Experience', "Land persoon", 'Land bedrijf', 'expat', 
+            kleur_keuze_options = [None, 'Jaar', 'Designation', 'Experience', "Land persoon", 'Land bedrijf', 'expat']
                                    'Grootte', 'Thuiswerk ratio']
             kleur_keuze = selectbox('Selecteer categorie voor kleuren', options=kleur_keuze_options)
     
@@ -260,7 +262,7 @@ with visualisatie:
                                                    labels={'x':str(scatterplotly_x), 'y':str(scatterplotly_y)},
                                                    trendline=trendline,
                                                    opacity=opacity,
-                                                   trendline_color_override='red', color=kleur_keuze
+                                                   trendline_color_override='red', color=kleur_keuze, size = marker_size_choice
                                                    )
              plotly_chart(scatterplotly)
         except:
