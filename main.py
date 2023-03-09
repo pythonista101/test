@@ -101,7 +101,7 @@ plotly_chart(figureee)""", language='python')
     
     
     figure2z1,ax= plt.subplots()
-    pd.crosstab(main_data.Working_Year, main_data.Experience).plot(kind='bar',ax=ax2z1)
+    pd.crosstab(data.Jaar, data.Experience).plot(kind='bar',ax=ax2z1)
     ax2z1.set_ylabel('Aantal')
     ax2z1.set_title('Ervaringsniveau van baan gedurende het jaar')
     ax2z1.set_xlabel('Werkjaar')
