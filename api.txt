@@ -1,7 +1,4 @@
-Kaggle verwacht dat we onzelf authenticeren voordat de API gebruikt kan worden. Hiervoor wordt eerst de kaggle api token ingevoerd.
-Vervolgens wordt een kaggle.json file van kaggle gedownload.Een .kaggle folder moet aangemaakt worden in de hoofdmap gebruikers.
-Een kaggle.json file wordt van downloads naar de hoofdmap verplaatst.Daarna vindt initalisatie plaats (zie code).
-Er zijn twee soorten datasets die gedownload kunnen worden. Een competitiedataset of de op zichzelf staande datasets.
-Wij maken gebruik van twee datasets die op zichzelf staand zijn.Deze gaan niet gepaard met een wedstrijd en kunnen door iedereen geupload worden.
-Op de datasetpagina staat de gebruikersnaam en de datasetnaam. (code)
-Ten slotte wordt elke dataset (met kaggle api) gedownload als een zip bestand.(code)
+Hieronder proberen wij uit te leggen hoe de API via kaggle wordt gebruikt, onder de uitleg staat een stukje code die we zo goed mogelijk proberen toe te lichten.
+ 
+Om de API toe te passen op Kaggle wordt verwacht dat je jezelf eerst authenticeert.
+Hiervoor wordt eerst de kaggle api token ingevoerd. Vervolgens wordt een kaggle.json file van kaggle zelf gedownload. Daarna wordt er een kaggle folder aangemaakt die wordt gebruikt in de hoofdmap gebruikers. Een kaggle.json file wordt van downloads naar de hoofdmap verplaatst. Daarna vindt initialisatie plaats. Er zijn twee soorten datasets die gedownload kunnen worden. Een competitiedataset of de op zichzelf staande datasets. Wij maken gebruik van twee datasets die op zichzelf staand zijn. Deze gaan niet gepaard met een wedstrijd en kunnen door iedereen geüpload worden. Op de datasetpagina staat de gebruikersnaam en de datasetnaam. Ten slotte wordt elke dataset (met kaggle api) gedownload als een zip bestand.
