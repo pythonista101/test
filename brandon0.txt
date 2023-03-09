@@ -1,0 +1,1 @@
+Voor de data-analyse zijn we eerst een aantal variabelen gaan analyseren met behulp van gegroepeerde staafdiagrammen. De variabelen ervaringsniveau van baan, bedrijfsomvang van het bedrijf en het type dienstverband voor het bedrijf worden geanalyseerd. 
