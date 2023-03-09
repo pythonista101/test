@@ -179,20 +179,28 @@ with feature_engineering:
     with f_left:
        pyplot(fig2, caption = 'Figuur x')
     with f_right:
-        write(ftfy.fix_encoding(t_feature_2))
+       write(ftfy.fix_encoding(t_feature_2))
     write(ftfy.fix_encoding(t_feature_3))
     write(data.head())
     
     
     
 with visualisatie:
-    groep_1 = data.groupby('Experience')['%'].mean()
-    
-    figc1, visc1 = plt.subplots()
-    groep_1.plot(kind='bar', ax = visc1)
-    pyplot(figc1)
-    
-    
+    groep_1_per = data.groupby('Experience')['%']
+    groep_2_per = data.groupby('Status')['%']
+    groep_3_per = data.groupby('expat')['%']
+    groep_4_per = data.groupby('Grootte')['%']
+
+    fig33, (ax33) = plt.subplots(2,2)
+
+    groep_1_per.mean().plot(kind = 'bar', ax = ax33[0,0])
+    groep_2_per.mean().plot(kind = 'bar', ax = ax33[0,1])
+    groep_3_per.mean().plot(kind = 'bar', ax = ax33[1,0])
+    groep_4_per.mean().plot(kind = 'bar', ax = ax33[1,1])
+
+    pyplot(fig33)
+
+
     
     
     
