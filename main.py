@@ -99,9 +99,15 @@ plotly_chart(figureee)""", language='python')
 
     header('tweede data analyse')
     write(data.columns)
+    write(ftfy.fix_encoding("Voor de data-analyse zijn we eerst een aantal variabelen gaan analyseren met behulp van gegroepeerde staafdiagrammen. De variabelen ervaringsniveau van baan, bedrijfsomvang van het bedrijf en het type dienstverband voor het bedrijf worden geanalyseerd. "))
+
+    
     brandon_l, brandon_m, brandon_r = tabs(['Ervaring', 'Bedrijfsgrootte', 'Status'])
     
     with brandon_l:
+        
+        write(ftfy.fix_encoding("Voor de eerste bar plot wordt naar het aantal medewerkers gekeken per ervaringsniveau van de baan gedurende de jaren 2020-2022. En staat voor entry-level oftewel junior met een instapniveau, Ex staat voor executive met manager gerelateerde beroepen. Mi staat voor een middenklasser en de Se staat voor werkervaring op expert/senior niveau. Als we het aantal medewerkers per ervaringsniveau voor de jaren 2020 tot 2022 met elkaar vergelijken dan valt het op dat het aantal medewerkers met een uitvoerend niveau in alle jaren in de minderheid zijn. Terwijl het aantal middenklassers en expert/senioren hoger ligt. Alleen in het jaar 2020 is het aantal junioren met instapniveau hoger. ")
+        
         figure2z1,ax2z1= plt.subplots()
         pd.crosstab(data.Jaar, data.Experience).plot(kind='bar',ax=ax2z1)
         ax2z1.set_ylabel('Aantal')
@@ -111,6 +117,9 @@ plotly_chart(figureee)""", language='python')
         pyplot(figure2z1)
     
     with brandon_m:
+              
+        write(ftfy.fix_encoding("Voor de tweede bar plot wordt naar de bedrijfsomvang van het bedrijf gekeken gedurende de jaren 2020-2022.Hierbij zal het aantal medewerkers voor het bedrijf verschillen per bedrijfsomvang. L staat voor meer dan 250 medewerkers, M staat voor 50 tot 250 medewerkers en S staat voor minder dan 50 medewerkers. Als we de bedrijfsomvang vergelijken dan valt het op dat het aantal medewerkers voor de verschillende bedrijfsomvang van 2020 laag is. In het jaar 2022 zien we een groot aantal medewerkers die behoren tot M. ")
+
         fig2z2, ax2z2= plt.subplots()
         pd.crosstab(data.Jaar, data.Grootte).plot(kind='bar',ax=ax2z2)
         ax2z2.set_ylabel('Aantal')
@@ -119,6 +128,10 @@ plotly_chart(figureee)""", language='python')
         ax2z2.legend(title='Bedrijfsomvang')
         pyplot(fig2z2)
     with brandon_r:
+        
+        write(ftfy.fix_encoding("Voor de derde bar plot wordt het aantal medewerkers per type dienstverband gedurende de jaren 2020-2022 met elkaar vergeleken. PT staat voor Part time, FT staat voor Full time, FL staat voor freelancer, CT staat voor contract. Uit de bar plot valt het op dat voor elk jaar van 2020 tot 2022 het aantal full time medewerkers hoog is ten opzichte van de andere dienstverbanden. Voor de overige dienstverbanden blijven de aantallen laag voor elk jaar.")
+
+        
         fig2z3, ax2z3= plt.subplots()
         pd.crosstab(data.Jaar, data.Status).plot(kind='bar',ax=ax2z3)
         ax2z3.set_ylabel('Aantal')
