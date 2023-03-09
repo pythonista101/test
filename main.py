@@ -253,11 +253,15 @@ with visualisatie:
                                                color='Designation')
             plotly_chart(scatterplotly)
         except:
+            write('Verander parameters')
+        try:
             scatterplotly = px.bar(x=subdata[scatterplotly_x],
                                                y=subdata[scatterplotly_y],
                                                labels={'x': str(scatterplotly_x), 'y': str(scatterplotly_y)},
                                                opacity=opacity)
             plotly_chart(scatterplotly)
+        except:
+            write('Verander parameters')
     with tab2_uni:
         code("""
         try:
