@@ -420,7 +420,7 @@ with salary_pred:
     if button('Genereer'):
         percent, salarisS = salary_prediction(des, ex, stat, la_pe, la_be, size, rat)
         subheader(f'Het voorspelde salaris is {salarisS}, dat is {percent}% ten opzichte van het gdp')
-            """, language='python')
+
     
     
     
@@ -445,7 +445,7 @@ with salary_pred:
     if button('Genereer'):
         percent, salarisS = salary_prediction(des, ex, stat, la_pe, la_be, size, rat)
         subheader(f'Het voorspelde salaris is {round(salarisS,2)}, dat is {round(percent,2)}% ten opzichte van het gdp')
-
+            """, language='python')
 
     
     
