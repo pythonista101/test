@@ -218,6 +218,8 @@ with visualisatie:
     ax33[0,0].set_ylabel('Percentage t.o.v. BBP [%]')
     ax33[1,0].set_ylabel('Percentage t.o.v. BBP [%]')
     
+    ax33[0,0].set_xlabel('Ervaring')
+    ax33[0,1].set_xlabel('Dienstverband')
     
     groep_1_sal = data.groupby('Experience')['Salaris €']
     groep_2_sal = data.groupby('Status')['Salaris €']
@@ -232,11 +234,13 @@ with visualisatie:
     ax34[0,0].set_ylabel('Salaris €')
     ax34[1,0].set_ylabel('Salaris €')
     
+    ax34[0,0].set_xlabel('Ervaring')
+    ax34[0,1].set_xlabel('Dienstverband')
 
     with left_brandon1:
-        pyplot(fig33)
-    with right_brandon1:
         pyplot(fig34)
+    with right_brandon1:
+        pyplot(fig33)
 
 
     
