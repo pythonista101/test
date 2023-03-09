@@ -196,6 +196,8 @@ with open('Visualisatie.txt', 'r') as file:
     Visualisatie = file.read()
 with open('UnivariateData.txt', 'r') as file:
     UnivariateData = file.read()
+with open('brandon1.txt', 'r') as file:
+    brandon1 = file.read()
 
 import plotly.express as px
 gdp_map_bol = px.choropleth(d, locations='Code', color='BBP per hoofd',
