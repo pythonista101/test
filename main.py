@@ -200,9 +200,10 @@ with visualisatie:
     groep_2_per.mean().plot(kind = 'bar', ax = ax33[0,1])
     groep_3_per.mean().plot(kind = 'bar', ax = ax33[1,0])
     groep_4_per.mean().plot(kind = 'bar', ax = ax33[1,1])
-
-
-
+    
+    ax33.set_ylabel('Percentage t.o.v. BBP [%]')
+    
+    
     groep_1_sal = data.groupby('Experience')['Salaris €']
     groep_2_sal = data.groupby('Status')['Salaris €']
     groep_3_sal = data.groupby('expat')['Salaris €']
@@ -213,9 +214,11 @@ with visualisatie:
     groep_2_sal.mean().plot(kind = 'bar', ax = ax34[0,1])
     groep_3_sal.mean().plot(kind = 'bar', ax = ax34[1,0])
     groep_4_sal.mean().plot(kind = 'bar', ax = ax34[1,1])
+    ax34.set_ylabel('Salaris €')
+    
+    
 
-
-    with right_brandon1:
+    with left_brandon1:
         pyplot(fig33)
     with right_brandon1:
         pyplot(fig34)
