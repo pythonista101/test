@@ -187,6 +187,7 @@ with feature_engineering:
     
 with visualisatie:
     
+    left_brandon1, right_brandon1 = tabs(['Salaris' , '%'])
     
     groep_1_per = data.groupby('Experience')['%']
     groep_2_per = data.groupby('Status')['%']
@@ -214,9 +215,10 @@ with visualisatie:
     groep_4_sal.mean().plot(kind = 'bar', ax = ax34[1,1])
 
 
-
-    pyplot(fig33)
-    pyplot(fig34)
+    with right_brandon1:
+        pyplot(fig33)
+    with right_brandon1:
+        pyplot(fig34)
 
 
     
