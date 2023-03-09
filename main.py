@@ -186,6 +186,20 @@ with feature_engineering:
     
     
 with visualisatie:
+    groep_1 = data.groupby('Jaar')['%'].mean()
+    
+    figc1, visc1 = plt.subplots()
+    groep_1.plot(kind='bar', ax = visc1)
+    pyplot(figc1)
+    
+    
+    
+    
+    
+    
+    
+    
+    
     header('Visualisatie')
     write(ftfy.fix_encoding(Visualisatie))
     tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
