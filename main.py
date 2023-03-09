@@ -99,31 +99,33 @@ plotly_chart(figureee)""", language='python')
 
     header('tweede data analyse')
     write(data.columns)
+    brandon_l, brandon_m, brandon_r = tabs(['Ervaring', 'Bedrijfsgrootte', 'Status'])
     
-    figure2z1,ax2z1= plt.subplots()
-    pd.crosstab(data.Jaar, data.Experience).plot(kind='bar',ax=ax2z1)
-    ax2z1.set_ylabel('Aantal')
-    ax2z1.set_title('Ervaringsniveau van baan gedurende het jaar')
-    ax2z1.set_xlabel('Werkjaar')
-    ax2z1.legend(title='Ervaringsniveau')
-    pyplot(figure2z1)
+    with brandon_l:
+        figure2z1,ax2z1= plt.subplots()
+        pd.crosstab(data.Jaar, data.Experience).plot(kind='bar',ax=ax2z1)
+        ax2z1.set_ylabel('Aantal')
+        ax2z1.set_title('Ervaringsniveau van baan gedurende het jaar')
+        ax2z1.set_xlabel('Werkjaar')
+        ax2z1.legend(title='Ervaringsniveau')
+        pyplot(figure2z1)
     
-    
-    fig2z2, ax2z2= plt.subplots()
-    pd.crosstab(data.Jaar, data.Grootte).plot(kind='bar',ax=ax2z2)
-    ax2z2.set_ylabel('Aantal')
-    ax2z2.set_title('Het mediane aantal werkenden voor het bedrijf gedurende het jaar ')
-    ax2z2.set_xlabel('Werkjaar')
-    ax2z2.legend(title='Bedrijfsomvang')
-    pyplot(fig2z2)
-
-    fig2z3, ax2z3= plt.subplots()
-    pd.crosstab(data.Jaar, data.Status).plot(kind='bar',ax=ax2z3)
-    ax2z3.set_ylabel('Aantal')
-    ax2z3.set_title('Het type dienstverband voor de functie gedurende het jaar')
-    ax2z3.set_xlabel('Werkjaar')
-    ax2z3.legend(title='Dienstverband')
-    pyplot(fig2z3)
+    with brandon_m:
+        fig2z2, ax2z2= plt.subplots()
+        pd.crosstab(data.Jaar, data.Grootte).plot(kind='bar',ax=ax2z2)
+        ax2z2.set_ylabel('Aantal')
+        ax2z2.set_title('Het mediane aantal werkenden voor het bedrijf gedurende het jaar ')
+        ax2z2.set_xlabel('Werkjaar')
+        ax2z2.legend(title='Bedrijfsomvang')
+        pyplot(fig2z2)
+    with brandon_r:
+        fig2z3, ax2z3= plt.subplots()
+        pd.crosstab(data.Jaar, data.Status).plot(kind='bar',ax=ax2z3)
+        ax2z3.set_ylabel('Aantal')
+        ax2z3.set_title('Het type dienstverband voor de functie gedurende het jaar')
+        ax2z3.set_xlabel('Werkjaar')
+        ax2z3.legend(title='Dienstverband')
+        pyplot(fig2z3)
     
     
     
