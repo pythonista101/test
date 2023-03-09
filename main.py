@@ -61,7 +61,7 @@ with data_analyse:
     write(raw.head())
     subheader('Univariate data analyse')
     write(ftfy.fix_encoding(UnivariateData))
-    tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
+    tab1_uni, tab2_uni = tabs(['Plot', 'Code'])
     with tab1_uni:
         left_ana, right_ana=columns(2)
         with left_ana:
@@ -101,7 +101,7 @@ plotly_chart(figureee)""", language='python')
     write(ftfy.fix_encoding(brandon0))
 
     
-    brandon_l, brandon_m, brandon_r = tabs(['Ervaring', 'Bedrijfsgrootte', 'Status'])
+    brandon_l, brandon_m, brandon_r = tabs(['Ervaring', 'Bedrijfsgrootte', 'Dienstverband'])
     
     with brandon_l:
             
@@ -111,7 +111,7 @@ plotly_chart(figureee)""", language='python')
         figure2z1,ax2z1= plt.subplots()
         pd.crosstab(data.Jaar, data.Experience).plot(kind='bar',ax=ax2z1)
         ax2z1.set_ylabel('Aantal')
-        ax2z1.set_title('Ervaringsniveau van baan per het jaar')
+        ax2z1.set_title('Ervaringsniveau van baan per jaar')
         ax2z1.set_xlabel('Werkjaar')
         ax2z1.legend(title='Ervaringsniveau')
         pyplot(figure2z1)
@@ -123,7 +123,7 @@ plotly_chart(figureee)""", language='python')
         fig2z2, ax2z2= plt.subplots()
         pd.crosstab(data.Jaar, data.Grootte).plot(kind='bar',ax=ax2z2)
         ax2z2.set_ylabel('Aantal')
-        ax2z2.set_title('Het mediane aantal werkenden voor het bedrijf per het jaar ')
+        ax2z2.set_title('Het aantal werkenden per bedrijfsomvang per het jaar ')
         ax2z2.set_xlabel('Werkjaar')
         ax2z2.legend(title='Bedrijfsomvang')
         pyplot(fig2z2)
@@ -135,7 +135,7 @@ plotly_chart(figureee)""", language='python')
         fig2z3, ax2z3= plt.subplots()
         pd.crosstab(data.Jaar, data.Status).plot(kind='bar',ax=ax2z3)
         ax2z3.set_ylabel('Aantal')
-        ax2z3.set_title('Het type dienstverband voor de functie per het jaar')
+        ax2z3.set_title('Het type dienstverband per het jaar')
         ax2z3.set_xlabel('Werkjaar')
         ax2z3.legend(title='Dienstverband')
         pyplot(fig2z3)
@@ -153,11 +153,11 @@ plotly_chart(figureee)""", language='python')
 with gdp_merge:
     header('Integreren van de BBP per hoofd data')
     write(ftfy.fix_encoding(wereldbol))
-    tab1_uni, tab2_uni = tabs(['Blog', 'Code'])
+    tab1_uni, tab2_uni = tabs(['Plot', 'Code'])
     with tab1_uni:
         merge_l, merge_r = columns(2)
         with merge_l:
-            option = radio('Selecteer visualisatie', options=['Kaart', 'Treemap'])
+            option = radio('Selecteer visualisatie', options=['Treemap','Kaart'])
         if option == 'Kaart':
             with merge_r:
                 kaart_soort = radio("Is de aarde plat?", options=['Ja', 'Nee'])
@@ -200,7 +200,7 @@ with feature_engineering:
     
 with visualisatie:
     header('Visualisatie - Inzichten uit de data')
-    write(ftfy.fix_encoding('In dit hoofdstuk laten we verschillende visualisaties zien om inzichten te halen uit de data'))
+    write(ftfy.fix_encoding('In dit hoofdstuk laten we verschillende visualisaties zien om inzichten te halen uit de data.'))
     
     subheader('Barplot per categorie')
     left_brandon1, right_brandon1 = tabs(['Salaris' , '%'])
@@ -217,8 +217,8 @@ with visualisatie:
     groep_3_per.mean().plot(kind = 'bar', ax = ax33[1,0])
     groep_4_per.mean().plot(kind = 'bar', ax = ax33[1,1])
     
-    ax33[0,0].set_ylabel('Percentage t.o.v. BBP [%]')
-    ax33[1,0].set_ylabel('Percentage t.o.v. BBP [%]')
+    ax33[0,0].set_ylabel('BBP [%]')
+    ax33[1,0].set_ylabel('BBP [%]')
     
     ax33[0,0].set_xlabel('Ervaring')
     ax33[0,1].set_xlabel('Dienstverband')
@@ -287,7 +287,7 @@ with visualisatie:
         """, language='python')
     
     subheader('Samenstelbaar scatterplot')
-    begin, checks, isernogniet, code_vis = tabs(['Home', 'Subset', 'Kleur', 'Code'])
+    begin, checks, isernogniet, code_vis = tabs(['Assen', 'Subset', 'Kleur', 'Code'])
     visualisatie_plot = container()
 
     with checks:
@@ -444,8 +444,8 @@ with salary_pred:
     ex = ex_dict[ex]
     if button('Genereer'):
         percent, salarisS = salary_prediction(des, ex, stat, la_pe, la_be, size, rat)
-        subheader(f'Het voorspelde salaris is {salarisS}, dat is {percent}% ten opzichte van het gdp')
-        """, language='python')
+        subheader(f'Het voorspelde salaris is {round(salarisS,2)}, dat is {round(percent,2)}% ten opzichte van het gdp')
+
 
     
     
@@ -464,10 +464,10 @@ with salary_pred:
     image(qrcode)
 
 text("Deze website is gemaakt door:")
-text('      -Daan van der Hoek')
-text('      -Kasper Goedings')
-text('      -Kevin Kosters')
-text('      -Brandon Haak')
+text('.      -Daan van der Hoek')
+text('.      -Kasper Goedings')
+text('.      -Kevin Kosters')
+text('.      -Brandon Haak')
     
     
     
