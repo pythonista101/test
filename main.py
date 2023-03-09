@@ -247,7 +247,7 @@ with visualisatie:
     with isernogniet:
         isernogniet_left, isernogniet_right = columns(2)
         with isernogniet_right:
-            marker_size_choice = selectbox('Selecteer variabele voor puntgrootte', options=[None, 'Salaris €', 'GDP €', '%']
+            marker_size_choice = selectbox('Selecteer variabele voor puntgrootte', options=[None, 'Salaris €', 'GDP €', '%'])
         
         with isernogniet_left:
             kleur_keuze_options = [None, 'Jaar', 'Designation', 'Experience', "Land persoon", 'Land bedrijf', 'expat']
