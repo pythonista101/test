@@ -193,7 +193,7 @@ with visualisatie:
     groep_3_per = data.groupby('expat')['%']
     groep_4_per = data.groupby('Grootte')['%']
 
-    fig33, (ax33) = plt.subplots(2,2)
+    fig33, (ax33) = plt.subplots(2,2,sharey=True)
 
     groep_1_per.mean().plot(kind = 'bar', ax = ax33[0,0])
     groep_2_per.mean().plot(kind = 'bar', ax = ax33[0,1])
@@ -206,7 +206,7 @@ with visualisatie:
     groep_2_sal = data.groupby('Status')['Salaris €']
     groep_3_sal = data.groupby('expat')['Salaris €']
     groep_4_sal = data.groupby('Grootte')['Salaris €']
-    fig34, (ax34) = plt.subplots(2,2)
+    fig34, (ax34) = plt.subplots(2,2,sharey=True)
 
     groep_1_per.mean().plot(kind = 'bar', ax = ax34[0,0])
     groep_2_per.mean().plot(kind = 'bar', ax = ax34[0,1])
