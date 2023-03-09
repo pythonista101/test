@@ -98,7 +98,7 @@ figureee = px.histogram(raw.dropna(), x=feature_choice,
 plotly_chart(figureee)""", language='python')
 
     header('tweede data analyse')
-    
+    write(data.columns)
     
     figure2z1,ax2z1= plt.subplots()
     pd.crosstab(data.Jaar, data.Experience).plot(kind='bar',ax=ax2z1)
@@ -107,6 +107,18 @@ plotly_chart(figureee)""", language='python')
     ax2z1.set_xlabel('Werkjaar')
     ax2z1.legend(title='Ervaringsniveau')
     pyplot(figure2z1)
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
 
 with gdp_merge:
