@@ -98,6 +98,16 @@ figureee = px.histogram(raw.dropna(), x=feature_choice,
 plotly_chart(figureee)""", language='python')
 
     header('tweede data analyse')
+    
+    
+    figure2z1,ax= plt.subplots()
+    pd.crosstab(main_data.Working_Year, main_data.Experience).plot(kind='bar',ax=ax2z1)
+    ax2z1.set_ylabel('Aantal')
+    ax2z1.set_title('Ervaringsniveau van baan gedurende het jaar')
+    ax2z1.set_xlabel('Werkjaar')
+    ax2z1.legend(title='Ervaringsniveau')
+    pyplot(figure2z1)
+    
 
 with gdp_merge:
     header('Integreren van de BBP per hoofd data')
