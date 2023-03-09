@@ -1,1 +1,3 @@
 Daarnaast waren er eigenlijk van 3 beroepen maar rond de 100 datapunten waardoor er naast de beroepen van ‘Data-scienist’, ‘Data engineer en ‘Data analist’ een voorspelling wordt gedaan op basis van heel weinig data. 
+
+Ook als we kijken naar het aantal datapunten van dienstverband zijn er veel meer full-time datapunten dan de andere drie dienstverbandvormen (free-lance, contract, part-time). Dit kan ook een onbetrouwbaarheidsfactor meegeven aan onze voorspeller als er niet naar full-time salarissen gevraagd wordt.
