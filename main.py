@@ -97,7 +97,7 @@ figureee = px.histogram(raw.dropna(), x=feature_choice,
                                 color=(feature_choice if coloryesno else None))
 plotly_chart(figureee)""", language='python')
 
-
+    header('tweede data analyse')
 
 with gdp_merge:
     header('Integreren van de BBP per hoofd data')
