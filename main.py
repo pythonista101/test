@@ -202,7 +202,8 @@ with visualisatie:
     groep_3_per.mean().plot(kind = 'bar', ax = ax33[1,0])
     groep_4_per.mean().plot(kind = 'bar', ax = ax33[1,1])
     
-    ax33.set_ylabel('Percentage t.o.v. BBP [%]')
+    ax33[0,0].set_ylabel('Percentage t.o.v. BBP [%]')
+    ax33[1,0].set_ylabel('Percentage t.o.v. BBP [%]')
     
     
     groep_1_sal = data.groupby('Experience')['Salaris €']
@@ -215,8 +216,8 @@ with visualisatie:
     groep_2_sal.mean().plot(kind = 'bar', ax = ax34[0,1])
     groep_3_sal.mean().plot(kind = 'bar', ax = ax34[1,0])
     groep_4_sal.mean().plot(kind = 'bar', ax = ax34[1,1])
-    ax34.set_ylabel('Salaris €')
-    
+    ax34[0,0].set_ylabel('Salaris €')
+    ax34[1,0].set_ylabel('Salaris €')
     
 
     with left_brandon1:
