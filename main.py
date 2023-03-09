@@ -108,15 +108,7 @@ plotly_chart(figureee)""", language='python')
     
     with brandon_l:
             
-        write(ftfy.fix_encoding('Voor de eerste bar plot wordt naar het aantal medewerkers gekeken' \n
-                                    'per ervaringsniveau van de baan gedurende de jaren 2020-2022. En staat voor '\n
-                                    'entry-level oftewel junior met een instapniveau, Ex staat voor executive met manager '\n
-                                    'gerelateerde beroepen. Mi staat voor een middenklasser en de Se staat voor werkervaring '\n
-                                    'op expert/senior niveau. Als we het aantal medewerkers per ervaringsniveau voor de '\n
-                                    'jaren 2020 tot 2022 met elkaar vergelijken dan valt het op dat het aantal medewerkers'\n
-                                    'met een uitvoerend niveau in alle jaren in de minderheid zijn. Terwijl het aantal '\n
-                                    'middenklassers en expert/senioren hoger ligt. Alleen in het jaar 2020 is het aantal '\n
-                                    'junioren met instapniveau hoger. ')
+        write(ftfy.fix_encoding(brandon1)
         
         
         figure2z1,ax2z1= plt.subplots()
